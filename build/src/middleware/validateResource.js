@@ -54,7 +54,7 @@ var validateSchema = function (resourceSchema) {
                     return [3 /*break*/, 3];
                 case 2:
                     e_1 = _a.sent();
-                    return [2 /*return*/, res.sendStatus(400)];
+                    return [2 /*return*/, res.sendStatus(400).send(e_1)];
                 case 3: return [2 /*return*/];
             }
         });

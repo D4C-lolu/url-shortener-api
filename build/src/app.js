@@ -8,7 +8,11 @@ var config_1 = __importDefault(require("config"));
 var routes_1 = __importDefault(require("./routes"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var db_1 = __importDefault(require("./db"));
+var cors_1 = __importDefault(require("cors"));
 var app = (0, express_1.default)();
+app.use((0, cors_1.default)({
+    origin: config_1.default.get("corsOrigin"),
+}));
 var port = config_1.default.get("port");
 //parse application/json
 app.use(body_parser_1.default.json());

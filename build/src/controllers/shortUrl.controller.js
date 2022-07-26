@@ -69,10 +69,10 @@ function handleRedirect(req, res) {
                 case 1:
                     short = _a.sent();
                     if (!short) {
-                        return [2 /*return*/, res.sendStatus(404)];
+                        return [2 /*return*/, res.status(404)];
                     }
                     analytics_model_1.default.create({ shortUrl: short._id });
-                    return [2 /*return*/, res.redirect("https://".concat(short.destination))];
+                    return [2 /*return*/, res.redirect(short.destination)];
             }
         });
     });
@@ -103,7 +103,7 @@ function getShortUrl(req, res) {
                 case 1:
                     short = _a.sent();
                     if (!short) {
-                        return [2 /*return*/, res.sendStatus(404)];
+                        return [2 /*return*/, res.status(404)];
                     }
                     return [2 /*return*/, res.json(short)];
             }
