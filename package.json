@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --config nodemon.json src/app.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "postinstall": "tsc",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
+  "engines":{"node":"16.13.2"},
   "keywords": [],
   "author": "",
   "license": "ISC",
