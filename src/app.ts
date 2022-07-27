@@ -7,8 +7,14 @@ import cors from "cors";
 
 const app = express();
 app.use(
+  // cors({
+  //   origin: config.get("corsOrigin"),
+  // })
+
   cors({
-    origin: config.get("corsOrigin"),
+    origin: ["https://guileless-cajeta-89c9b1.netlify.app/"],
+    methods: ["GET", "POST"],
+    credentials: true,
   })
 );
 const port = config.get("port");
