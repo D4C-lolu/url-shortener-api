@@ -12,7 +12,7 @@ app.use(
   // })
 
   cors({
-    origin: ["https://guileless-cajeta-89c9b1.netlify.app/"],
+    origin: ["https://guileless-cajeta-89c9b1.netlify.app"],
     methods: ["GET", "POST"],
     credentials: true,
   })
